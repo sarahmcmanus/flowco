@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:pricklesandgoo.com)",
+      "WebFetch(domain:bexnaj.yoga)",
+      "WebFetch(domain:intothewildtherapy.com)",
+      "WebFetch(domain:www.willbamberg.com)",
+      "WebFetch(domain:manuelamischkereeds.com)",
+      "WebFetch(domain:www.samek.life)",
+      "WebFetch(domain:www.kleinbottle.com)",
+      "WebFetch(domain:gobeyondgoals.com)",
+      "WebFetch(domain:typezero.fun)"
+    ]
+  }
+}
