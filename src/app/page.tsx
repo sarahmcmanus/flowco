@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <section className="bg-[#FAF7F2] pt-16 pb-0 px-6">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-10 sm:gap-16 pb-16">
+      <section className="bg-[#FAF7F2] pt-16 pb-16 px-6">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-10 sm:gap-16">
 
           {/* Logo + text */}
           <div className="flex-1 flex items-center gap-6">
@@ -21,7 +21,7 @@ export default function Home() {
             />
             <div>
               <h1 className="font-heading text-[3.25rem] sm:text-[4rem] text-[#2C2416] leading-tight mb-3">
-                Flowing<br /><span className="pl-8 sm:pl-10">Coherence</span>
+                Flowing<br />Coherence
               </h1>
               <p className="font-heading italic text-xl text-[#8B4A1A] mb-2">
                 From inner tangle to coherent flow.
@@ -42,27 +42,26 @@ export default function Home() {
           {/* Circular portrait */}
           <div className="shrink-0 w-52 h-52 sm:w-64 sm:h-64 rounded-full overflow-hidden shadow-lg ring-4 ring-[#C4830A]/30">
             <Image
-              src="/images/portrait-cropped.jpeg"
+              src="/images/portrait-full.jpeg"
               alt="Sarah McManus"
               width={256}
               height={256}
-              className="object-cover object-top w-full h-full"
+              className="object-cover w-full h-full"
+              style={{ objectPosition: "center 18%" }}
               priority
             />
           </div>
         </div>
       </section>
 
-      <WaveDivider gradient={{ from: "#3D2468", to: "#7A2E1A" }} />
-
       {/* ── WHAT I OFFER ─────────────────────────────────────── */}
       <section
-        className="px-6 pt-14 pb-0"
         style={{
           background: "linear-gradient(160deg, #3D2468 0%, #7A2E1A 50%, #C4561E 100%)",
         }}
       >
-        <div className="max-w-3xl mx-auto pb-16">
+        <WaveDivider fill="#FAF7F2" flip />
+        <div className="max-w-3xl mx-auto px-6 pt-6 pb-16">
           <h2 className="font-heading text-3xl sm:text-4xl text-[#FAF0DC] mb-2">
             What we work on together
           </h2>
@@ -101,9 +100,8 @@ export default function Home() {
             dependent on me, not more.
           </p>
         </div>
+        <WaveDivider fill="#FAF7F2" />
       </section>
-
-      <WaveDivider gradient={{ from: "#FAF7F2", to: "#3D2468" }} />
 
       {/* ── FEATURED EVENT ───────────────────────────────────── */}
       <section className="bg-[#FAF7F2] px-6 pt-12 pb-0">
@@ -141,16 +139,14 @@ export default function Home() {
         </div>
       </section>
 
-      <WaveDivider fill="#C4561E" />
-
       {/* ── NEWSLETTER ───────────────────────────────────────── */}
       <section
-        className="px-6 pt-14 pb-0"
         style={{
           background: "linear-gradient(160deg, #C4561E 0%, #C4830A 60%, #D4A017 100%)",
         }}
       >
-        <div className="max-w-xl mx-auto text-center pb-16">
+        <WaveDivider fill="#FAF7F2" flip />
+        <div className="max-w-xl mx-auto px-6 text-center pt-6 pb-16">
           <h2 className="font-heading text-3xl text-white mb-3">
             Stay in the loop
           </h2>
@@ -173,9 +169,8 @@ export default function Home() {
             </button>
           </form>
         </div>
+        <WaveDivider fill="#FAF7F2" />
       </section>
-
-      <WaveDivider fill="#FAF7F2" />
 
       {/* ── BLOG TEASERS ─────────────────────────────────────── */}
       <section className="bg-[#FAF7F2] px-6 pt-12 pb-20">

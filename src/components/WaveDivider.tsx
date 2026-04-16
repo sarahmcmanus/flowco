@@ -2,12 +2,14 @@ interface WaveDividerProps {
   fill?: string;
   gradient?: { from: string; to: string };
   className?: string;
+  flip?: boolean;
 }
 
 export default function WaveDivider({
   fill,
   gradient,
   className = "",
+  flip = false,
 }: WaveDividerProps) {
   const hasGradient = !!gradient;
   const gradientId = hasGradient
@@ -15,7 +17,10 @@ export default function WaveDivider({
     : undefined;
 
   return (
-    <div className={`w-full overflow-hidden leading-none ${className}`}>
+    <div
+      className={`w-full overflow-hidden leading-none ${className}`}
+      style={flip ? { transform: "scaleY(-1)" } : undefined}
+    >
       <svg
         viewBox="0 0 1440 56"
         preserveAspectRatio="none"
