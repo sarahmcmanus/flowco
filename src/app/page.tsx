@@ -10,7 +10,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-10 sm:gap-16">
 
           {/* Logo + text */}
-          <div className="flex-1 flex flex-col gap-5">
+          <div className="flex-1">
             {/* Logo floated left; title text wraps around its shape */}
             <div style={{ display: "flow-root" }}>
               <Image
@@ -28,12 +28,15 @@ export default function Home() {
                   shapeMargin: "6px",
                 }}
               />
-              <h1 className="font-heading text-[3.25rem] sm:text-[4rem] text-[#2C2416] leading-[0.875]">
-                Flowing<br /><span style={{ paddingLeft: "16px" }}>Coherence</span>
+              <h1
+                className="font-heading text-[3.25rem] sm:text-[4rem] text-[#2C2416] leading-[0.96]"
+                style={{ paddingTop: "16px" }}
+              >
+                Flowing<br /><span style={{ paddingLeft: "10px" }}>Coherence</span>
               </h1>
             </div>
-            {/* Tagline, description, CTA — left edge aligned with logo left edge (x=0) */}
-            <div className="pl-0">
+            {/* Tagline, description, CTA — plain block so left edge = x=0 = logo left edge */}
+            <div style={{ marginTop: "1.25rem" }}>
               <p className="font-heading italic text-xl text-[#8B4A1A] mb-2">
                 From inner tangle to coherent flow.
               </p>
