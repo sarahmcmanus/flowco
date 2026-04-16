@@ -68,6 +68,7 @@ export default function Home() {
               width={256}
               height={256}
               className="w-full h-full object-cover"
+              style={{ transform: "scale(1.025)" }}
               priority
             />
           </div>
