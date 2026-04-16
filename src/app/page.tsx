@@ -14,16 +14,16 @@ export default function Home() {
             {/* Logo floated left; title text wraps around its shape */}
             <div style={{ display: "flow-root" }}>
               <Image
-                src="/images/logo.png"
+                src="/images/logo2.png"
                 alt="Flowing Coherence logo"
-                width={204}
+                width={183}
                 height={160}
                 priority
                 style={{
                   float: "left",
-                  width: "204px",
+                  width: "183px",
                   height: "160px",
-                  shapeOutside: "url(/images/logo.png)",
+                  shapeOutside: "url(/images/logo2.png)",
                   shapeImageThreshold: "0.05",
                   shapeMargin: "6px",
                 }}
@@ -35,8 +35,8 @@ export default function Home() {
                 <span style={{ paddingLeft: "5px" }}>Flowing</span><br /><span style={{ paddingLeft: "10px" }}>Coherence</span>
               </h1>
             </div>
-            {/* Tagline left edge aligned to logo's first opaque pixel (6.1px into the 204px element) */}
-            <div style={{ marginTop: "1.25rem", marginLeft: "6px" }}>
+            {/* Tagline left edge flush with logo artwork (logo2.png has no transparent left margin) */}
+            <div style={{ marginTop: "1.25rem" }}>
               <p className="font-heading italic text-xl text-[#8B4A1A] mb-2">
                 From inner tangle to coherent flow.
               </p>
