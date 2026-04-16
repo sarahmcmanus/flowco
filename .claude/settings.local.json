@@ -9,7 +9,9 @@
       "WebFetch(domain:www.samek.life)",
       "WebFetch(domain:www.kleinbottle.com)",
       "WebFetch(domain:gobeyondgoals.com)",
-      "WebFetch(domain:typezero.fun)"
+      "WebFetch(domain:typezero.fun)",
+      "Bash(curl *)",
+      "Bash(npm run *)"
     ]
   }
 }
