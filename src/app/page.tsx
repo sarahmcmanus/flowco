@@ -7,10 +7,10 @@ export default function Home() {
     <>
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="bg-[#FAF7F2] pt-16 pb-16 px-6">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-10 sm:gap-16">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row sm:items-center gap-10 sm:gap-16">
 
           {/* Logo + text */}
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             {/* Logo + title: float + shape-outside so 'Coherence' follows the logo's
                 irregular right edge. Both logo width and font-size use the same
                 vw-based clamp() values so the whole lockup scales proportionally. */}
@@ -23,7 +23,7 @@ export default function Home() {
                 priority
                 style={{
                   float: "left",
-                  width: "clamp(90px, 15.7vw, 183px)",
+                  width: "clamp(50px, 15.7vw, 183px)",
                   height: "auto",
                   shapeOutside: "url(/images/logo2.png)",
                   shapeImageThreshold: "0.05",
@@ -33,7 +33,7 @@ export default function Home() {
               <h1
                 className="font-heading text-[#2C2416]"
                 style={{
-                  fontSize: "clamp(1.875rem, 5.5vw, 4rem)",
+                  fontSize: "clamp(1rem, 5.5vw, 4rem)",
                   lineHeight: "0.96",
                   paddingTop: "0.25em",
                 }}
@@ -61,7 +61,7 @@ export default function Home() {
           </div>
 
           {/* Circular portrait */}
-          <div className="shrink-0 w-52 h-52 sm:w-64 sm:h-64 rounded-full overflow-hidden shadow-lg ring-4 ring-[#C4830A]/30">
+          <div className="shrink-0 self-center w-52 h-52 sm:w-64 sm:h-64 rounded-full overflow-hidden shadow-lg ring-4 ring-[#C4830A]/30">
             <Image
               src="/images/portrait-crop2.png"
               alt="Sarah McManus"
