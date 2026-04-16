@@ -44,13 +44,13 @@ export default function Home() {
           </div>
 
           {/* Circular portrait */}
-          <div className="shrink-0 w-52 h-52 sm:w-64 sm:h-64 rounded-full overflow-hidden shadow-lg ring-4 ring-[#C4830A]/30">
+          <div className="shrink-0 w-52 h-52 sm:w-64 sm:h-64 drop-shadow-lg">
             <Image
-              src="/images/portrait-full.jpeg"
+              src="/images/portrait-circle.png"
               alt="Sarah McManus"
               width={256}
               height={256}
-              className="object-cover w-full h-full scale-[2] origin-[50%_12%]"
+              className="w-full h-full"
               priority
             />
           </div>
