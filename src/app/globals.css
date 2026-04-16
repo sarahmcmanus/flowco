@@ -17,6 +17,20 @@
   --color-text-muted:#6B5744;
 }
 
+/* Hero lockup: logo width and font-size scale with viewport.
+   Mobile uses larger vw so the lockup fills the full-width column.
+   At md (768px) the layout switches to two columns so we scale back. */
+:root {
+  --hero-logo-w:  clamp(70px, 25vw, 183px);
+  --hero-font-sz: clamp(1.25rem, 8.74vw, 3rem);
+}
+@media (min-width: 768px) {
+  :root {
+    --hero-logo-w:  clamp(100px, 15.7vw, 183px);
+    --hero-font-sz: clamp(1.875rem, 5.5vw, 4rem);
+  }
+}
+
 body {
   background-color: #FAF7F2;
   color: #2C2416;
