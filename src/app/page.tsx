@@ -10,19 +10,23 @@ export default function Home() {
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-10 sm:gap-16">
 
           {/* Logo + text */}
-          <div className="flex-1 flex items-center gap-6">
-            <Image
-              src="/images/logo.png"
-              alt="Flowing Coherence"
-              width={160}
-              height={160}
-              priority
-              className="shrink-0"
-            />
-            <div>
-              <h1 className="font-heading text-[3.25rem] sm:text-[4rem] text-[#2C2416] leading-tight mb-3">
+          <div className="flex-1 flex flex-col gap-5">
+            {/* Logo paired with title only */}
+            <div className="flex items-center gap-6">
+              <Image
+                src="/images/logo.png"
+                alt="Flowing Coherence"
+                width={160}
+                height={160}
+                priority
+                className="shrink-0"
+              />
+              <h1 className="font-heading text-[3.25rem] sm:text-[4rem] text-[#2C2416] leading-tight">
                 Flowing<br />Coherence
               </h1>
+            </div>
+            {/* Tagline, description, CTA below the logo+title unit */}
+            <div>
               <p className="font-heading italic text-xl text-[#8B4A1A] mb-2">
                 From inner tangle to coherent flow.
               </p>
@@ -46,8 +50,7 @@ export default function Home() {
               alt="Sarah McManus"
               width={256}
               height={256}
-              className="object-cover w-full h-full"
-              style={{ objectPosition: "center 18%" }}
+              className="object-cover w-full h-full scale-[2] origin-[50%_12%]"
               priority
             />
           </div>
