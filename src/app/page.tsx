@@ -28,12 +28,12 @@ export default function Home() {
                   shapeMargin: "6px",
                 }}
               />
-              <h1 className="font-heading text-[3.25rem] sm:text-[4rem] text-[#2C2416] leading-tight">
-                Flowing<br />Coherence
+              <h1 className="font-heading text-[3.25rem] sm:text-[4rem] text-[#2C2416] leading-[0.875]">
+                Flowing<br /><span style={{ paddingLeft: "16px" }}>Coherence</span>
               </h1>
             </div>
-            {/* Tagline, description, CTA below the logo+title unit */}
-            <div>
+            {/* Tagline, description, CTA — left edge aligned with logo left edge (x=0) */}
+            <div className="pl-0">
               <p className="font-heading italic text-xl text-[#8B4A1A] mb-2">
                 From inner tangle to coherent flow.
               </p>
