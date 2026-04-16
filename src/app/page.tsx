@@ -11,10 +11,10 @@ export default function Home() {
 
           {/* Logo + text */}
           <div className="flex-1">
-            {/* Logo + title as a single flex unit — both governed by the same clamp()
-                so they shrink together proportionally at every viewport size.
-                logo-width : font-size ratio ≈ 2.86, preserved via matching vw midpoints. */}
-            <div className="flex items-start" style={{ gap: "0.4rem" }}>
+            {/* Logo + title: float + shape-outside so 'Coherence' follows the logo's
+                irregular right edge. Both logo width and font-size use the same
+                vw-based clamp() values so the whole lockup scales proportionally. */}
+            <div style={{ display: "flow-root" }}>
               <Image
                 src="/images/logo2.png"
                 alt="Flowing Coherence logo"
@@ -22,9 +22,12 @@ export default function Home() {
                 height={160}
                 priority
                 style={{
+                  float: "left",
                   width: "clamp(90px, 15.7vw, 183px)",
                   height: "auto",
-                  flexShrink: 0,
+                  shapeOutside: "url(/images/logo2.png)",
+                  shapeImageThreshold: "0.05",
+                  shapeMargin: "0.1em",
                 }}
               />
               <h1
