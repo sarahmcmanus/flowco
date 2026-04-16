@@ -35,8 +35,8 @@ export default function Home() {
                 <span style={{ paddingLeft: "5px" }}>Flowing</span><br /><span style={{ paddingLeft: "10px" }}>Coherence</span>
               </h1>
             </div>
-            {/* Tagline, description, CTA — plain block so left edge = x=0 = logo left edge */}
-            <div style={{ marginTop: "1.25rem" }}>
+            {/* Tagline left edge aligned to logo's first opaque pixel (6.1px into the 204px element) */}
+            <div style={{ marginTop: "1.25rem", marginLeft: "6px" }}>
               <p className="font-heading italic text-xl text-[#8B4A1A] mb-2">
                 From inner tangle to coherent flow.
               </p>
