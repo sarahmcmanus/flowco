@@ -60,14 +60,15 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Circular portrait */}
-          <div className="shrink-0 w-52 h-52 sm:w-64 sm:h-64 drop-shadow-lg">
+          {/* Circular portrait — CSS circle crop, no pre-processed image needed */}
+          <div className="shrink-0 w-52 h-52 sm:w-64 sm:h-64 rounded-full overflow-hidden shadow-lg ring-4 ring-[#C4830A]/30">
             <Image
-              src="/images/portrait-circle.png"
+              src="/images/portrait-full.jpeg"
               alt="Sarah McManus"
               width={256}
               height={256}
-              className="w-full h-full"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: "50% 5%" }}
               priority
             />
           </div>
