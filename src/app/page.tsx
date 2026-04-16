@@ -7,20 +7,21 @@ export default function Home() {
     <>
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="bg-[#FAF7F2] pt-16 pb-0 px-6">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-10 pb-16">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-10 sm:gap-16 pb-16">
 
           {/* Logo + text */}
-          <div className="flex-1 flex flex-col items-center sm:items-start gap-5">
+          <div className="flex-1 flex items-center gap-6">
             <Image
               src="/images/logo.png"
               alt="Flowing Coherence"
               width={160}
               height={160}
               priority
+              className="shrink-0"
             />
             <div>
               <h1 className="font-heading text-5xl sm:text-6xl text-[#2C2416] leading-tight mb-3">
-                Flowing<br />Coherence
+                Flowing<br /><span className="pl-8 sm:pl-10">Coherence</span>
               </h1>
               <p className="font-heading italic text-xl text-[#8B4A1A] mb-2">
                 From inner tangle to coherent flow.
@@ -52,7 +53,7 @@ export default function Home() {
         </div>
       </section>
 
-      <WaveDivider fill="#3D2468" />
+      <WaveDivider gradient={{ from: "#7A2E1A", to: "#3D2468" }} />
 
       {/* ── WHAT I OFFER ─────────────────────────────────────── */}
       <section

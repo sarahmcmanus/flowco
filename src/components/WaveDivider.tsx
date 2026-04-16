@@ -1,9 +1,19 @@
 interface WaveDividerProps {
-  fill: string;       // color of the next section
+  fill?: string;
+  gradient?: { from: string; to: string };
   className?: string;
 }
 
-export default function WaveDivider({ fill, className = "" }: WaveDividerProps) {
+export default function WaveDivider({
+  fill,
+  gradient,
+  className = "",
+}: WaveDividerProps) {
+  const hasGradient = !!gradient;
+  const gradientId = hasGradient
+    ? `waveGrad-${gradient.from.replace("#", "")}-${gradient.to.replace("#", "")}`
+    : undefined;
+
   return (
     <div className={`w-full overflow-hidden leading-none ${className}`}>
       <svg
@@ -12,9 +22,17 @@ export default function WaveDivider({ fill, className = "" }: WaveDividerProps) 
         className="w-full h-10 sm:h-14"
         aria-hidden="true"
       >
+        {hasGradient && (
+          <defs>
+            <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor={gradient.from} />
+              <stop offset="100%" stopColor={gradient.to} />
+            </linearGradient>
+          </defs>
+        )}
         <path
           d="M0,28 C180,28 180,50 360,50 C540,50 540,28 720,28 C900,28 900,6 1080,6 C1260,6 1260,28 1440,28 L1440,56 L0,56 Z"
-          fill={fill}
+          fill={hasGradient ? `url(#${gradientId})` : fill}
         />
       </svg>
     </div>
