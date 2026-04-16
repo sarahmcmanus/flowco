@@ -32,7 +32,7 @@ export default function Home() {
                 className="font-heading text-[3.25rem] sm:text-[4rem] text-[#2C2416] leading-[0.96]"
                 style={{ paddingTop: "16px" }}
               >
-                Flowing<br /><span style={{ paddingLeft: "10px" }}>Coherence</span>
+                <span style={{ paddingLeft: "5px" }}>Flowing</span><br /><span style={{ paddingLeft: "10px" }}>Coherence</span>
               </h1>
             </div>
             {/* Tagline, description, CTA — plain block so left edge = x=0 = logo left edge */}
