@@ -20,7 +20,7 @@ export default function Home() {
               className="shrink-0"
             />
             <div>
-              <h1 className="font-heading text-5xl sm:text-6xl text-[#2C2416] leading-tight mb-3">
+              <h1 className="font-heading text-[3.25rem] sm:text-[4rem] text-[#2C2416] leading-tight mb-3">
                 Flowing<br /><span className="pl-8 sm:pl-10">Coherence</span>
               </h1>
               <p className="font-heading italic text-xl text-[#8B4A1A] mb-2">
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </section>
 
-      <WaveDivider gradient={{ from: "#7A2E1A", to: "#3D2468" }} />
+      <WaveDivider gradient={{ from: "#3D2468", to: "#7A2E1A" }} />
 
       {/* ── WHAT I OFFER ─────────────────────────────────────── */}
       <section
@@ -103,7 +103,7 @@ export default function Home() {
         </div>
       </section>
 
-      <WaveDivider fill="#FAF7F2" />
+      <WaveDivider gradient={{ from: "#FAF7F2", to: "#3D2468" }} />
 
       {/* ── FEATURED EVENT ───────────────────────────────────── */}
       <section className="bg-[#FAF7F2] px-6 pt-12 pb-0">
