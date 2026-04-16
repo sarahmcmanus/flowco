@@ -73,7 +73,7 @@ export default function Nav() {
         {/* CTA */}
         <Link
           href="/coaching#book"
-          className="shrink-0 bg-[#C4830A] hover:bg-[#a36d08] text-white text-sm font-medium px-4 py-2 rounded-full transition-colors"
+          className="hidden md:inline-block shrink-0 bg-[#C4830A] hover:bg-[#a36d08] text-white text-sm font-medium px-4 py-2 rounded-full transition-colors"
         >
           Book a free consult
         </Link>
