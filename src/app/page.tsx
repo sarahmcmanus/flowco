@@ -38,8 +38,8 @@ export default function Home() {
                   paddingTop: "0.25em",
                 }}
               >
-                <span style={{ paddingLeft: "0.08em" }}>Flowing</span><br />
-                <span style={{ paddingLeft: "0.16em" }}>Coherence</span>
+                <span style={{ paddingLeft: "0.16em" }}>Flowing</span><br />
+                <span style={{ paddingLeft: "0.24em" }}>Coherence</span>
               </h1>
             </div>
             {/* Tagline — starts flush with logo artwork left edge */}
