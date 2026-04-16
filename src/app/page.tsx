@@ -11,15 +11,22 @@ export default function Home() {
 
           {/* Logo + text */}
           <div className="flex-1 flex flex-col gap-5">
-            {/* Logo paired with title only */}
-            <div className="flex items-center gap-6">
+            {/* Logo floated left; title text wraps around its shape */}
+            <div style={{ display: "flow-root" }}>
               <Image
                 src="/images/logo.png"
-                alt="Flowing Coherence"
-                width={160}
+                alt="Flowing Coherence logo"
+                width={204}
                 height={160}
                 priority
-                className="shrink-0"
+                style={{
+                  float: "left",
+                  width: "204px",
+                  height: "160px",
+                  shapeOutside: "url(/images/logo.png)",
+                  shapeImageThreshold: "0.05",
+                  shapeMargin: "6px",
+                }}
               />
               <h1 className="font-heading text-[3.25rem] sm:text-[4rem] text-[#2C2416] leading-tight">
                 Flowing<br />Coherence
