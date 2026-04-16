@@ -11,8 +11,10 @@ export default function Home() {
 
           {/* Logo + text */}
           <div className="flex-1">
-            {/* Logo floated left; title text wraps around its shape */}
-            <div style={{ display: "flow-root" }}>
+            {/* Logo + title as a single flex unit — both governed by the same clamp()
+                so they shrink together proportionally at every viewport size.
+                logo-width : font-size ratio ≈ 2.86, preserved via matching vw midpoints. */}
+            <div className="flex items-start" style={{ gap: "0.4rem" }}>
               <Image
                 src="/images/logo2.png"
                 alt="Flowing Coherence logo"
@@ -20,22 +22,24 @@ export default function Home() {
                 height={160}
                 priority
                 style={{
-                  float: "left",
-                  width: "183px",
-                  height: "160px",
-                  shapeOutside: "url(/images/logo2.png)",
-                  shapeImageThreshold: "0.05",
-                  shapeMargin: "6px",
+                  width: "clamp(90px, 15.7vw, 183px)",
+                  height: "auto",
+                  flexShrink: 0,
                 }}
               />
               <h1
-                className="font-heading text-[3.25rem] sm:text-[4rem] text-[#2C2416] leading-[0.96]"
-                style={{ paddingTop: "16px" }}
+                className="font-heading text-[#2C2416]"
+                style={{
+                  fontSize: "clamp(1.875rem, 5.5vw, 4rem)",
+                  lineHeight: "0.96",
+                  paddingTop: "0.25em",
+                }}
               >
-                <span style={{ paddingLeft: "5px" }}>Flowing</span><br /><span style={{ paddingLeft: "10px" }}>Coherence</span>
+                <span style={{ paddingLeft: "0.08em" }}>Flowing</span><br />
+                <span style={{ paddingLeft: "0.16em" }}>Coherence</span>
               </h1>
             </div>
-            {/* Tagline left edge flush with logo artwork (logo2.png has no transparent left margin) */}
+            {/* Tagline — starts flush with logo artwork left edge */}
             <div style={{ marginTop: "1.25rem" }}>
               <p className="font-heading italic text-xl text-[#8B4A1A] mb-2">
                 From inner tangle to coherent flow.
