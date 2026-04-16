@@ -1,65 +1,175 @@
 import Image from "next/image";
+import Link from "next/link";
+import WaveDivider from "@/components/WaveDivider";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      {/* ── HERO ─────────────────────────────────────────────── */}
+      <section className="bg-[#FAF7F2] pt-20 pb-0 px-6">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-10 pb-16">
+          {/* Text */}
+          <div className="flex-1 text-center sm:text-left">
+            <h1 className="font-heading text-5xl sm:text-6xl text-[#2C2416] leading-tight mb-4">
+              Flowing<br />Coherence
+            </h1>
+            <p className="text-xl text-[#6B5744] mb-2 font-heading italic">
+              From inner tangle to coherent flow.
+            </p>
+            <p className="text-base text-[#6B5744] mb-8 max-w-md">
+              Somatic IFS coaching with Sarah McManus — for when you know what
+              you want, but can&apos;t quite get there.
+            </p>
+            <Link
+              href="/coaching#book"
+              className="inline-block bg-[#C4830A] hover:bg-[#a36d08] text-white font-medium px-7 py-3 rounded-full transition-colors"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              Book a free consultation
+            </Link>
+          </div>
+
+          {/* Portrait */}
+          <div className="shrink-0">
+            <Image
+              src="/images/portrait-cropped.jpeg"
+              alt="Sarah McManus"
+              width={220}
+              height={260}
+              className="rounded-2xl object-cover shadow-md"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
+      <WaveDivider fill="#FDF0E4" />
+
+      {/* ── WHAT I OFFER ─────────────────────────────────────── */}
+      <section
+        className="px-6 pt-12 pb-0"
+        style={{ background: "linear-gradient(135deg, #FDF0E4 0%, #FAF7F2 100%)" }}
+      >
+        <div className="max-w-3xl mx-auto pb-16">
+          <h2 className="font-heading text-3xl sm:text-4xl text-[#2C2416] mb-6">
+            What we work on together
+          </h2>
+          <div className="grid sm:grid-cols-3 gap-6 text-[#2C2416]">
+            <div>
+              <h3 className="font-heading text-xl mb-2 text-[#C4830A]">Grounding</h3>
+              <p className="text-sm leading-relaxed text-[#6B5744]">
+                Staying present with difficult material instead of bouncing off
+                it — the foundation that makes everything else possible.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-heading text-xl mb-2 text-[#C4830A]">Tracking</h3>
+              <p className="text-sm leading-relaxed text-[#6B5744]">
+                Distinguishing the different parts, wants, and body sensations
+                at play — so you can work with them rather than being tangled
+                in them.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-heading text-xl mb-2 text-[#C4830A]">
+                Attuned presence
+              </h3>
+              <p className="text-sm leading-relaxed text-[#6B5744]">
+                The combination of the two — a spacious, curious attention that
+                invites parts of you to be understood and to shift.
+              </p>
+            </div>
+          </div>
+          <p className="mt-8 text-[#6B5744] max-w-2xl">
+            These are the things that are hardest to do alone when you&apos;re in
+            the middle of it. With practice in sessions, they become more
+            natural — something you carry with you.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <WaveDivider fill="#F0EDF8" />
+
+      {/* ── FEATURED EVENT ───────────────────────────────────── */}
+      <section
+        className="px-6 pt-12 pb-0"
+        style={{ background: "linear-gradient(135deg, #F0EDF8 0%, #FAF7F2 100%)" }}
+      >
+        <div className="max-w-3xl mx-auto pb-16">
+          <h2 className="font-heading text-3xl sm:text-4xl text-[#2C2416] mb-2">
+            Upcoming event
+          </h2>
+          <p className="text-[#6B5744] mb-8">
+            Workshops and events on inner alignment and agency.
+          </p>
+
+          {/* Event card — placeholder, replace with real event */}
+          <div className="border border-[#2C2416]/10 rounded-2xl p-6 bg-white/60 max-w-lg">
+            <p className="text-xs font-medium text-[#C4830A] uppercase tracking-wider mb-1">
+              Beyond Goals · San Francisco
+            </p>
+            <h3 className="font-heading text-xl text-[#2C2416] mb-1">
+              Core Gameplay Loop for Inner Alignment
+            </h3>
+            <p className="text-sm text-[#6B5744] mb-4">
+              Wednesday, April 22 · 6–9pm
+            </p>
+            <Link
+              href="/events"
+              className="text-sm font-medium text-[#253480] hover:underline"
+            >
+              See all events →
+            </Link>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <WaveDivider fill="#FAF7F2" />
+
+      {/* ── NEWSLETTER ───────────────────────────────────────── */}
+      <section className="bg-[#FAF7F2] px-6 pt-12 pb-0">
+        <div className="max-w-xl mx-auto text-center pb-16">
+          <h2 className="font-heading text-3xl text-[#2C2416] mb-3">
+            Stay in the loop
+          </h2>
+          <p className="text-[#6B5744] mb-6">
+            Occasional writing on inner alignment, coaching, and the practice
+            of coherent living. No spam, unsubscribe anytime.
+          </p>
+          {/* Newsletter form — replace action with your email provider */}
+          <form className="flex flex-col sm:flex-row gap-3 justify-center">
+            <input
+              type="email"
+              placeholder="your@email.com"
+              required
+              className="flex-1 px-4 py-3 rounded-full border border-[#2C2416]/20 bg-white text-[#2C2416] placeholder:text-[#6B5744]/60 focus:outline-none focus:border-[#C4830A]"
+            />
+            <button
+              type="submit"
+              className="bg-[#253480] hover:bg-[#1a2460] text-white font-medium px-6 py-3 rounded-full transition-colors shrink-0"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <WaveDivider fill="#F5EFE6" />
+
+      {/* ── BLOG TEASERS ─────────────────────────────────────── */}
+      <section
+        className="px-6 pt-12 pb-20"
+        style={{ background: "#F5EFE6" }}
+      >
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-heading text-3xl sm:text-4xl text-[#2C2416] mb-8">
+            Writing
+          </h2>
+          <p className="text-[#6B5744] italic">
+            Blog posts coming soon.
+          </p>
+          {/* Blog posts will be listed here once added */}
+        </div>
+      </section>
+    </>
   );
 }
