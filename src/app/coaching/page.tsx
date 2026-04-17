@@ -112,10 +112,14 @@ export default function CoachingPage() {
               href="https://cal.com/sarahmcmanus/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-center bg-[#C4830A] hover:bg-[#a36d08] text-white rounded-2xl py-5 px-6 transition-colors"
+              className="w-full text-center rounded-2xl py-5 px-6 transition-opacity hover:opacity-80"
+              style={{
+                background: "linear-gradient(135deg, #F9D4A5 0%, #E0D4F5 100%)",
+                border: "1px solid #C4830A55",
+              }}
             >
-              <span className="font-heading text-xl block">Book a free consultation</span>
-              <span className="text-sm text-white/80">30 minutes · no commitment</span>
+              <span className="font-heading text-xl text-[#2C2416] block">Book a free consultation</span>
+              <span className="text-sm text-[#6B5744]">30 minutes · no commitment</span>
             </a>
 
             {/* Paid sessions — 3 columns */}
@@ -132,8 +136,8 @@ export default function CoachingPage() {
                   rel="noopener noreferrer"
                   className="text-center py-4 px-3 rounded-2xl transition-opacity hover:opacity-80"
                   style={{
-                    background: "linear-gradient(135deg, #FDF0E4 0%, #F0EDF8 100%)",
-                    border: "1px solid #C4830A33",
+                    background: "linear-gradient(135deg, #F9D4A5 0%, #E0D4F5 100%)",
+                    border: "1px solid #C4830A55",
                   }}
                 >
                   <p className="font-heading text-[#2C2416] text-lg">{duration}</p>
