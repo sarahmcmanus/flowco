@@ -162,7 +162,7 @@ export default function CoachingPage() {
             href="https://buy.stripe.com/8x2fZi5Q0adi8Xmgkdd3i00"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#2C2416] hover:bg-[#1a1510] text-white font-medium px-7 py-3 rounded-full transition-colors"
+            className="inline-block bg-[#FAF7F2] hover:bg-white text-[#2C2416] font-medium px-7 py-3 rounded-full transition-colors"
           >
             Pay via Stripe
           </a>
