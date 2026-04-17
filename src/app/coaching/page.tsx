@@ -147,13 +147,35 @@ export default function CoachingPage() {
             </div>
           </div>
 
-          <p className="text-sm text-[#6B5744] mb-8">
-            Sliding scale available — reach out via{" "}
-            <Link href="/contact" className="underline hover:text-[#C4830A] transition-colors">
-              contact
-            </Link>{" "}
-            if pricing is a barrier.
-          </p>
+          {/* More options */}
+          <div
+            className="rounded-2xl p-5 mt-1"
+            style={{
+              background: "linear-gradient(135deg, #FDF0E4 0%, #F0EDF8 100%)",
+              border: "1px solid #C4830A33",
+            }}
+          >
+            <p className="text-sm text-[#6B5744] mb-3">
+              <a
+                href="https://cal.com/sarahmcmanus/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-[#C4830A] transition-colors"
+              >
+                Book a free consult
+              </a>
+              {" "}or{" "}
+              <Link href="/contact" className="underline hover:text-[#C4830A] transition-colors">
+                contact me
+              </Link>
+              {" "}for booking links with more options:
+            </p>
+            <ul className="text-sm text-[#6B5744] space-y-1">
+              <li><span className="font-medium text-[#2C2416]">Sliding scale</span> — $80–120 USD</li>
+              <li><span className="font-medium text-[#2C2416]">Canadian clients</span> — $100–150 CAD, pay via e-transfer</li>
+              <li><span className="font-medium text-[#2C2416]">International clients</span> — pay via Wise</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -180,6 +202,13 @@ export default function CoachingPage() {
           >
             Pay via Stripe (USD)
           </a>
+          <p className="text-white/70 text-sm mt-4">
+            PayPal and Venmo also accepted —{" "}
+            <Link href="/contact" className="underline hover:text-white transition-colors">
+              get in touch
+            </Link>
+            .
+          </p>
         </div>
         <WaveDivider fill="#FAF7F2" />
       </section>
