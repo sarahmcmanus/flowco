@@ -16,7 +16,7 @@ function TwitterBird() {
 export default function Nav() {
   return (
     <header className="sticky top-0 z-50 bg-[#FAF7F2]/90 backdrop-blur-sm border-b border-[#2C2416]/10">
-      <nav className="max-w-5xl mx-auto px-3 sm:px-6 py-3 flex items-center justify-between gap-4">
+      <nav className="max-w-5xl mx-auto px-3 sm:px-6 py-3 flex items-center justify-start md:justify-between gap-4">
         {/* Logo + name */}
         <Link href="/" className="flex items-center gap-3 shrink-0">
           <Image
