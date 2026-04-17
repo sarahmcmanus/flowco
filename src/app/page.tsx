@@ -194,13 +194,33 @@ export default function Home() {
       </section>
 
       {/* ── BLOG TEASERS ─────────────────────────────────────── */}
-      <section className="bg-[#FAF7F2] px-6 pt-12 pb-20">
-        <div className="max-w-3xl mx-auto">
+      <section className="bg-[#FAF7F2] px-6 pt-12 pb-0">
+        <div className="max-w-3xl mx-auto pb-16">
           <h2 className="font-heading text-3xl sm:text-4xl text-[#2C2416] mb-8">
             Writing
           </h2>
           <p className="text-[#6B5744] italic">
             Blog posts coming soon.
+          </p>
+        </div>
+      </section>
+
+      {/* ── RESOURCES ────────────────────────────────────────── */}
+      <section
+        style={{
+          background: "linear-gradient(160deg, #5C7EC7 0%, #2E4B9A 50%, #1E2152 100%)",
+        }}
+      >
+        <WaveDivider fill="#FAF7F2" flip />
+        <div className="max-w-3xl mx-auto px-6 pt-6 pb-20">
+          <h2 className="font-heading text-3xl sm:text-4xl text-white mb-2">
+            Resources
+          </h2>
+          <p className="text-blue-200/80 mb-8 italic font-heading">
+            Things worth reading, watching, and trying.
+          </p>
+          <p className="text-white/60 italic text-sm">
+            Coming soon.
           </p>
         </div>
       </section>
