@@ -98,7 +98,7 @@ export default function CoachingPage() {
 
       {/* ── BOOKING ──────────────────────────────────────────── */}
       <section id="book" className="bg-[#FAF7F2] px-6 pt-12 pb-0">
-        <div className="max-w-3xl mx-auto pb-16">
+        <div className="max-w-3xl mx-auto pb-6">
           <h2 className="font-heading text-3xl sm:text-4xl text-[#2C2416] mb-2">
             Book a session
           </h2>
