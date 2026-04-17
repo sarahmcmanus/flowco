@@ -15,7 +15,7 @@ export default function CoachingPage() {
       <section className="bg-[#FAF7F2] px-6 pt-16 pb-0">
         <div className="max-w-3xl mx-auto pb-16">
           <h1 className="font-heading text-4xl sm:text-5xl text-[#2C2416] mb-6">
-            Work with Sarah
+            Work with me
           </h1>
           <p className="text-lg text-[#6B5744] mb-4 max-w-2xl">
             Most of us have something we&apos;d like to change — a pattern of
@@ -125,9 +125,9 @@ export default function CoachingPage() {
             {/* Paid sessions — 3 columns */}
             <div className="grid grid-cols-3 gap-3">
               {[
-                { duration: "1 hour", price: "$120", href: "https://cal.com/sarahmcmanus/60min" },
-                { duration: "90 min", price: "$180", href: "https://cal.com/sarahmcmanus/90-minute-call" },
-                { duration: "2 hours", price: "$240", href: "https://cal.com/sarahmcmanus/2-hour" },
+                { duration: "1 hour", price: "$120 USD", href: "https://cal.com/sarahmcmanus/60min" },
+                { duration: "90 min", price: "$180 USD", href: "https://cal.com/sarahmcmanus/90-minute-call" },
+                { duration: "2 hours", price: "$240 USD", href: "https://cal.com/sarahmcmanus/2-hour" },
               ].map(({ duration, price, href }) => (
                 <a
                   key={href}
@@ -178,7 +178,7 @@ export default function CoachingPage() {
             rel="noopener noreferrer"
             className="inline-block bg-[#FAF7F2] hover:bg-white text-[#2C2416] font-medium px-7 py-3 rounded-full transition-colors"
           >
-            Pay via Stripe
+            Pay via Stripe (USD)
           </a>
         </div>
         <WaveDivider fill="#FAF7F2" />
