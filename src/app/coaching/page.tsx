@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import WaveDivider from "@/components/WaveDivider";
-import CalEmbed from "@/components/CalEmbed";
 
 export const metadata: Metadata = {
   title: "Coaching — Flowing Coherence",
@@ -106,29 +105,42 @@ export default function CoachingPage() {
             chance to see if we&apos;re a good fit.
           </p>
 
-          {/* Pricing overview */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
-            {[
-              { label: "Free consult", duration: "30 min", price: "Free" },
-              { label: "Session", duration: "1 hour", price: "$120" },
-              { label: "Session", duration: "90 min", price: "$180" },
-              { label: "Session", duration: "2 hours", price: "$240" },
-            ].map(({ label, duration, price }) => (
-              <div
-                key={duration}
-                className="rounded-2xl p-4 text-center"
-                style={{
-                  background: "linear-gradient(135deg, #FDF0E4 0%, #F0EDF8 100%)",
-                  border: "1px solid #C4830A33",
-                }}
-              >
-                <p className="text-xs text-[#C4830A] font-medium uppercase tracking-wider mb-1">
-                  {label}
-                </p>
-                <p className="font-heading text-[#2C2416] text-lg">{duration}</p>
-                <p className="text-[#6B5744] font-medium">{price}</p>
-              </div>
-            ))}
+          {/* Booking buttons */}
+          <div className="flex flex-col gap-3 mb-8">
+            {/* Free consult — full width */}
+            <a
+              href="https://cal.com/sarahmcmanus/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full text-center bg-[#C4830A] hover:bg-[#a36d08] text-white rounded-2xl py-5 px-6 transition-colors"
+            >
+              <span className="font-heading text-xl block">Book a free consultation</span>
+              <span className="text-sm text-white/80">30 minutes · no commitment</span>
+            </a>
+
+            {/* Paid sessions — 3 columns */}
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                { duration: "1 hour", price: "$120", href: "https://cal.com/sarahmcmanus/60min" },
+                { duration: "90 min", price: "$180", href: "https://cal.com/sarahmcmanus/90-minute-call" },
+                { duration: "2 hours", price: "$240", href: "https://cal.com/sarahmcmanus/2-hour" },
+              ].map(({ duration, price, href }) => (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center py-4 px-3 rounded-2xl transition-opacity hover:opacity-80"
+                  style={{
+                    background: "linear-gradient(135deg, #FDF0E4 0%, #F0EDF8 100%)",
+                    border: "1px solid #C4830A33",
+                  }}
+                >
+                  <p className="font-heading text-[#2C2416] text-lg">{duration}</p>
+                  <p className="text-[#6B5744] font-medium">{price}</p>
+                </a>
+              ))}
+            </div>
           </div>
 
           <p className="text-sm text-[#6B5744] mb-8">
@@ -138,8 +150,6 @@ export default function CoachingPage() {
             </Link>{" "}
             if pricing is a barrier.
           </p>
-
-          <CalEmbed calLink="sarahmcmanus" />
         </div>
       </section>
 
