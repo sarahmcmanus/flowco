@@ -61,7 +61,7 @@ export default function Home() {
           </div>
 
           {/* Circular portrait */}
-          <div className="shrink-0 self-center w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden" style={{ boxShadow: "0 0 0 4px rgba(61,36,104,0.45), 0 10px 25px -5px rgba(61,36,104,0.4)" }}>
+          <div className="shrink-0 self-center w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden" style={{ boxShadow: "0 0 0 4px rgba(122,36,104,0.5), 0 10px 25px -5px rgba(122,36,104,0.45)" }}>
             <Image
               src="/images/portrait-crop2.png"
               alt="Sarah McManus"
