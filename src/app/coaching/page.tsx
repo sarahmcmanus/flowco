@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import WaveDivider from "@/components/WaveDivider";
 import CalEmbed from "@/components/CalEmbed";
-import StripePayForm from "@/components/StripePayForm";
 
 export const metadata: Metadata = {
   title: "Coaching — Flowing Coherence",
@@ -156,10 +155,17 @@ export default function CoachingPage() {
             Pay for a session
           </h2>
           <p className="text-white/80 mb-6">
-            For session top-ups, extensions, or any other payment — enter the
-            amount below and pay securely via Stripe.
+            For session top-ups, extensions, or any other payment — pay
+            securely via Stripe.
           </p>
-          <StripePayForm />
+          <a
+            href="https://buy.stripe.com/8x2fZi5Q0adi8Xmgkdd3i00"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#2C2416] hover:bg-[#1a1510] text-white font-medium px-7 py-3 rounded-full transition-colors"
+          >
+            Pay via Stripe
+          </a>
         </div>
         <WaveDivider fill="#FAF7F2" />
       </section>
