@@ -128,7 +128,9 @@ export default function Home() {
       <section className="bg-[#FAF7F2] px-6 pt-12 pb-0">
         <div className="max-w-3xl mx-auto pb-16">
           <h2 className="font-heading text-3xl sm:text-4xl text-[#2C2416] mb-2">
-            Upcoming event
+            <Link href="/events" className="hover:text-[#C4830A] transition-colors">
+              Upcoming events
+            </Link>
           </h2>
           <p className="text-[#6B5744] mb-8">
             Workshops and events on inner alignment and agency.
