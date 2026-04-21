@@ -27,7 +27,7 @@ export default function ContactForm() {
         body: JSON.stringify(data),
       });
       const json = await res.json();
-      if (!res.ok) throw new Error(json.error ?? "Something went wrong.");
+      if (!res.ok) throw new Error(json.error ?? `Server error ${res.status}`);
       setStatus("sent");
     } catch (err: unknown) {
       setErrorMsg(err instanceof Error ? err.message : "Something went wrong.");

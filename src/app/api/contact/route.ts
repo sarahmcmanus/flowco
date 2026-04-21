@@ -2,38 +2,65 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
 export async function POST(req: NextRequest) {
-  const { name, email, subject, message, _gotcha } = await req.json();
+  console.log("[contact] POST received");
 
-  // Honeypot: bots fill this field, humans don't
+  let body: Record<string, string>;
+  try {
+    body = await req.json();
+    console.log("[contact] parsed body:", { ...body, message: body.message?.slice(0, 50) });
+  } catch (e) {
+    console.error("[contact] failed to parse request body:", e);
+    return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
+  }
+
+  const { name, email, subject, message, _gotcha } = body;
+
   if (_gotcha) {
-    return NextResponse.json({ ok: true }); // silently discard
+    console.log("[contact] honeypot triggered, discarding");
+    return NextResponse.json({ ok: true });
   }
 
   if (!name || !email || !message) {
+    console.log("[contact] missing required fields:", { name: !!name, email: !!email, message: !!message });
     return NextResponse.json({ error: "Please fill in all required fields." }, { status: 400 });
   }
 
   const apiKey = process.env.RESEND_API_KEY;
+  console.log("[contact] RESEND_API_KEY present:", !!apiKey, "length:", apiKey?.length);
+
   if (!apiKey) {
-    // Not yet configured — log and return success so form UI still works in dev
-    console.log("Contact form submission (RESEND_API_KEY not set):", { name, email, subject, message });
+    console.log("[contact] no API key — logging submission only");
     return NextResponse.json({ ok: true });
   }
 
-  const resend = new Resend(apiKey);
+  try {
+    const resend = new Resend(apiKey);
 
-  const { error } = await resend.emails.send({
-    from: "Flowing Coherence Contact Form <onboarding@resend.dev>",
-    to: "sarah@flowingcoherence.com",
-    replyTo: email,
-    subject: subject ? `[Contact] ${subject}` : `[Contact] Message from ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
-  });
+    const payload = {
+      from: "Flowing Coherence <onboarding@resend.dev>",
+      to: "sarah@flowingcoherence.com",
+      replyTo: email,
+      subject: subject ? `[Contact] ${subject}` : `[Contact] Message from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+    };
+    console.log("[contact] sending via Resend, payload:", { ...payload, text: payload.text.slice(0, 80) });
 
-  if (error) {
-    console.error("Resend error:", error);
-    return NextResponse.json({ error: "Failed to send message. Please try emailing directly." }, { status: 500 });
+    const result = await resend.emails.send(payload);
+    console.log("[contact] Resend result:", JSON.stringify(result));
+
+    if (result.error) {
+      console.error("[contact] Resend API error:", JSON.stringify(result.error));
+      return NextResponse.json(
+        { error: `Resend error: ${result.error.message ?? JSON.stringify(result.error)}` },
+        { status: 500 }
+      );
+    }
+
+    console.log("[contact] success, id:", result.data?.id);
+    return NextResponse.json({ ok: true });
+  } catch (e: unknown) {
+    console.error("[contact] unexpected exception:", e);
+    const msg = e instanceof Error ? e.message : JSON.stringify(e);
+    return NextResponse.json({ error: `Unexpected error: ${msg}` }, { status: 500 });
   }
-
-  return NextResponse.json({ ok: true });
 }
