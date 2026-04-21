@@ -192,7 +192,7 @@ export default function Home() {
             <input type="hidden" name="redirect" value="https://flowingcoherence.com?subscribed=true" />
             <button
               type="submit"
-              className="bg-[#2C2416] hover:bg-[#1a1510] text-white font-medium px-6 py-3 rounded-full transition-colors shrink-0"
+              className="bg-[#C4561E] hover:bg-[#a34518] text-white font-medium px-6 py-3 rounded-full transition-colors shrink-0"
             >
               Subscribe
             </button>
