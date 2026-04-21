@@ -37,8 +37,8 @@ export async function POST(req: NextRequest) {
     const resend = new Resend(apiKey);
 
     const payload = {
-      from: "Flowing Coherence <onboarding@resend.dev>",
-      to: "sarah@flowingcoherence.com",
+      from: "Flowing Coherence <hello@contact.flowingcoherence.com>",
+      to: "mcmanus.sarah.a@gmail.com",
       replyTo: email,
       subject: subject ? `[Contact] ${subject}` : `[Contact] Message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
