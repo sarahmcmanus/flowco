@@ -175,13 +175,19 @@ export default function Home() {
             Occasional writing on inner alignment, coaching, and the practice
             of coherent living. No spam, unsubscribe anytime.
           </p>
-          <form className="flex flex-col sm:flex-row gap-3 justify-center">
+          <form
+            action="https://sarahamcmanus.substack.com/api/v1/free"
+            method="post"
+            className="flex flex-col sm:flex-row gap-3 justify-center"
+          >
             <input
               type="email"
+              name="email"
               placeholder="your@email.com"
               required
               className="flex-1 px-4 py-3 rounded-full border border-white/30 bg-white/20 text-white placeholder:text-white/60 focus:outline-none focus:bg-white/30"
             />
+            <input type="hidden" name="redirect" value="https://flowingcoherence.com?subscribed=true" />
             <button
               type="submit"
               className="bg-[#2C2416] hover:bg-[#1a1510] text-white font-medium px-6 py-3 rounded-full transition-colors shrink-0"

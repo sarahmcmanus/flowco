@@ -24,10 +24,10 @@ export default function ContactPage() {
               Email
             </p>
             <a
-              href="mailto:mcmanus.sarah.a@gmail.com"
+              href="mailto:sarah@flowingcoherence.com"
               className="font-heading text-xl text-[#2C2416] hover:text-[#C4830A] transition-colors"
             >
-              mcmanus.sarah.a@gmail.com
+              sarah@flowingcoherence.com
             </a>
           </div>
 
