@@ -15,8 +15,8 @@ export default function ContactPage() {
           Get in touch
         </h1>
         <p className="text-lg text-[#6B5744] mb-10">
-          Questions about coaching, wanting to talk before booking, or anything
-          else — I&apos;d love to hear from you.
+          If you have questions about coaching, want to talk before booking, or
+          anything else, I&apos;d love to hear from you.
         </p>
 
         <ContactForm />
