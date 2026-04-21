@@ -16,24 +16,7 @@ export default function ContactPage() {
         </h1>
         <p className="text-lg text-[#6B5744] mb-10">
           Questions about coaching, wanting to talk before booking, or anything
-          else — I&apos;d love to hear from you. You can also reach me directly
-          at{" "}
-          <a
-            href="mailto:sarah@flowingcoherence.com"
-            className="underline hover:text-[#C4830A] transition-colors"
-          >
-            sarah@flowingcoherence.com
-          </a>
-          {" "}or on{" "}
-          <a
-            href="https://twitter.com/SarahAMcManus"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-[#C4830A] transition-colors"
-          >
-            Twitter
-          </a>
-          .
+          else — I&apos;d love to hear from you.
         </p>
 
         <ContactForm />
